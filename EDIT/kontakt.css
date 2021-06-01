@@ -1,0 +1,138 @@
+
+
+.header-btn, .header-btn1, .header-btn2,.header-btn3,.header-btn4, .header-btn5, .header-btn6
+{
+  text-decoration: none !important;
+  border-radius: 30px;
+  padding: 4px 12px;
+  color: #fff !important;
+  background: transparent;
+  font-weight: 600;
+  border: 2px solid grey;
+  outline: none;
+  position:relative;
+  top:20px;
+  left:20px;
+}
+.header-btn:hover, .header-btn1:hover, .header-btn2:hover, .header-btn3:hover, .header-btn4:hover, .header-btn5:hover, .header-btn6:hover
+{
+transform: scale(1.05);
+background-color: #107afd;
+border: 2px solid white;
+
+}
+
+body
+{
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0
+    ,0.8), rgba(0,0,0,0.8)), url(image/background.jpg);
+    
+}
+
+.Wrapper
+{
+  width:100%;
+}
+
+.img-info
+{
+  width: 100%;
+}
+
+.img-info h2
+{
+  padding:30px 30px 20px;
+  font-family: Arial;
+  font-size:30px;
+  color: white;
+  line-height: 44px;
+}
+
+.img-info p
+{
+  padding:0px 30px 20px;
+  font-family: Arial;
+  font-size:16px;
+  color: white;
+  line-height: 24px;
+}
+
+.img-fpv
+{
+  margin-top: 40px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .Wrapper
+  {
+    width:600px;
+    margin: 0 auto;
+  }
+
+.img-info h2
+{
+  margin-top: 30px;
+  padding:20px 0px 0px;
+}
+
+.img-info p
+{
+  padding:20px 0px 0px;
+}
+
+.img-fpv
+{
+  padding-top: 30px;
+}
+
+}
+
+@media only screen and (min-width: 1025px)
+{
+  .Wrapper
+  {
+    width:1000px;
+  }
+
+  .img-info
+  {
+    width: 50%;
+    float:right;
+  }
+
+  .img-fpv
+  {
+    float:left;
+    padding-top: 100px;
+    width:40%;
+  }
+
+  .img-info h2
+  {
+    padding:200px 0px 0px 0px;
+  }
+
+  .img-info p
+  {
+    padding:20px 0px 0px 0px;
+  }
+
+
+  }
+
+p
+{font-size:13pt;
+  line-height: 1.3;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  color: whitesmoke;
+  text-align: justify;
+  margin:0;
+  padding:0;
+}
+*{ 
+  -webkit-box-sizing: border-box; 
+          box-sizing: border-box;
+}

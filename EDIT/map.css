@@ -1,0 +1,167 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+.header-btn, .header-btn1, .header-btn2,.header-btn3,.header-btn4, .header-btn5, .header-btn6
+{
+  text-decoration: none !important;
+  border-radius: 30px;
+  padding: 4px 12px;
+  color: #fff !important;
+  background: transparent;
+  font-weight: 600;
+  border: 2px solid grey;
+  outline: none;
+  position:relative;
+  top:20px;
+  left:20px;
+}
+.header-btn:hover, .header-btn1:hover, .header-btn2:hover, .header-btn3:hover, .header-btn4:hover, .header-btn5:hover, .header-btn6:hover
+{
+transform: scale(1.05);
+background-color: #107afd;
+border: 2px solid white;
+
+}
+
+body
+{
+  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(image/background3.jpg);
+}
+
+
+.Wrapper
+{
+  width:100%;
+}
+
+.img-info
+{
+  width: 100%;
+  margin-top:50px;
+}
+
+
+.img-info h2
+{
+  padding:30px 30px 5px;
+  font-family: Arial;
+  font-size:30px;
+  color: white;
+  line-height: 44px;
+}
+
+.img-info h3
+{
+  padding:30px 0px 5px;
+  font-family: Arial;
+  font-size:30px;
+  color: white;
+  line-height: 44px;
+  margin-left: 30px;
+}
+
+.img-info p
+{
+  padding:0px 30px 20px;
+  font-family: Arial;
+  font-size:16px;
+  color: white;
+  line-height: 24px;
+}
+
+.last
+{
+    margin-bottom: 20px;
+}
+
+.img-fpv
+{
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .Wrapper
+  {
+    width:600px;
+    margin: 0 auto;
+  }
+
+
+.img-info h2
+{
+  margin-top: 30px;
+  padding:20px 0px 0px;
+}
+
+.img-info h3
+{
+  padding:20px 0px 0px;
+  margin-left: 0px;
+}
+
+.img-info p
+{
+  padding:20px 0px 0px;
+}
+
+.img-fpv
+{
+  padding-top: 30px;
+}
+
+ 
+
+
+}
+
+@media only screen and (min-width: 1025px)
+{
+  .Wrapper
+  {
+    width:1000px;
+  }
+
+  .img-info
+  {
+    width: 100%;
+    float:left;
+    margin-top:-50px;
+  }
+
+  .txt
+  {
+    float:right;
+  }
+
+  .map
+  {
+    float:left;
+    margin-top: 200px;
+    width:600px;
+  }
+
+  .img-fpv
+  {
+    float:left;
+    padding-top: 100px;
+    width:40%;
+  }
+
+  .img-info h2
+  {
+    padding:200px 0px 0px 0px;
+  }
+
+  .img-info p
+  {
+    padding:20px 0px 0px 0px;
+  }
+
+  
+ 
+}

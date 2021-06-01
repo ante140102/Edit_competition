@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="calendar.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalendar</title>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"/>
+</head>
+
+<body onload="renderDate()">
+    <a href="index.html" class="header-btn">Naslovnica</a>
+  <a href="calendar.html" class="header-btn1">Kalendar</a>
+  
+  <a href="upitnik.html" class="header-btn3">Upitnik</a>
+  <a href="map.html" class="header-btn4">Mapa</a>
+  <a href="Shop.html" class="header-btn5">Shop</a>
+  <a href="kontakt.html" class="header-btn6">Kontakt</a>
+    <div class="wrapper">
+        <div class="calendar">
+            <div class="month">
+                <div class="prev" onclick="moveDate('prev')">
+                    <span>&#10094;</span>
+                </div>
+                <div>
+                    <h2 id="month"></h2>
+                    <p id="date_str"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095;</span>
+                </div>
+            </div>
+            <div class="weekdays">
+                <div>Ned</div>
+                <div>Pon</div>
+                <div>Uto</div>
+                <div>Sri</div>
+                <div>Čet</div>
+                <div>Pet</div>
+                <div>Sub</div>
+            </div>
+            <div class="days">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var dt = new Date();
+        function renderDate() {
+            dt.setDate(1);
+            var day = dt.getDay();
+            var today = new Date();
+            var endDate = new Date(
+                dt.getFullYear(),
+                dt.getMonth() + 1,
+                0
+            ).getDate();
+
+            var prevDate = new Date(
+                dt.getFullYear(),
+                dt.getMonth(),
+                0
+            ).getDate();
+            var months = [
+                "Siječanj",
+                "Veljača",
+                "Ožujak",
+                "Travanj",
+                "Svibanj",
+                "Lipanj",
+                "Srpanj",
+                "Kolovoz",
+                "Rujan",
+                "Listopad",
+                "Studeni",
+                "Prosinac"
+            ]
+            document.getElementById("month").innerHTML = months[dt.getMonth()];
+            document.getElementById("date_str").innerHTML = dt.toDateString();
+            var cells = "";
+            for (x = day; x > 0; x--) {
+                cells += "<div class='prev_date'>" + (prevDate - x + 1) + "</div>";
+            }
+            console.log(day);
+            for (i = 1; i <= endDate; i++) {
+                if (i == today.getDate() && dt.getMonth() == today.getMonth()) cells += "<div class='today'>" + i + "</div>";
+                else
+                    cells += "<div>" + i + "</div>";
+            }
+            document.getElementsByClassName("days")[0].innerHTML = cells;
+
+        }
+
+        function moveDate(para) {
+            if(para == "prev") {
+                dt.setMonth(dt.getMonth() - 1);
+            } else if(para == 'next') {
+                dt.setMonth(dt.getMonth() + 1);
+            }
+            renderDate();
+        }
+    </script>
+</body>
+
+</html>

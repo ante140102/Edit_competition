@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upitnik</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"rel="stylesheet"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"/>
+<style>
+    .galerija{        
+        width: 22%;
+        height:100%;
+        border-radius: 5%;
+    }  
+
+    #osobni-podaci *{
+        margin-bottom: 5px;         
+    }
+
+    legend{
+        font-weight: bold;
+        color:blue;
+    }
+
+    fieldset{
+        border-radius: 20px;
+        border:1px solid yellow;
+    }
+
+    #osobni-podaci, #pitanja{
+        width:60%;
+    }
+
+
+
+</style>
+<script src="main.js"></script>
+</head>
+<body>
+    <a href="index.html" class="header-btn">Naslovnica</a>
+  <a href="calendar.html" class="header-btn1">Kalendar</a>
+  
+  <a href="upitnik.html" class="header-btn3">Upitnik</a>
+  <a href="map.html" class="header-btn4">Mapa</a>
+  <a href="Shop.html" class="header-btn5">Shop</a>
+  <a href="kontakt.html" class="header-btn6">Kontakt</a>
+    <div class="Wrapper">
+       <br>
+       <br>
+      <h1>Upitnik</h1>
+      <br>
+       <br>
+      <form name="obrazac1" method="post" action="javascript: posalji();" >         
+        <fieldset id="osobni-podaci">
+            <legend>Osobni podaci:</legend>
+            <p>Ime: <input type="text" name="ime" placeholder=""></p><br>
+           <p>Prezime: <input type="text" name="prezime" placeholder=""></p><br>
+            <p>E-mail: <input type="email" name="email"> </p> <br>
+            <p> Adresa  <br>
+            <textarea name="adresa" cols="50" rows="4"></textarea></p>
+            <p>Razred:</p>  <br>
+            <p><input type="radio" name="razred" value="prvi" checked> prvi</p><br>
+            <p><input type="radio" name="razred" value="drugi">drugi</p><br>
+            <p><input type="radio" name="razred" value="treci">treći</p><br>
+            <p><input type="radio" name="razred" value="cetvrti">četvrti</p> <br> </p>                      
+        </fieldset> 
+        <br>
+        <fieldset id="pitanja">
+            <legend>Kviz</legend>
+            <p> Koje godine je Sinj oslobođen od Turaka?<br><br>
+            <input type="radio" name="pitanje1" value="Ne">1615.godine<br><br>
+            <input type="radio" name="pitanje1" value="Da">1715.godine<br><br>
+            <input type="radio" name="pitanje1" value="Ne">1815.godine<br> <br>  
+            <p> U kojem mjesecu se održava Alka?<br><br>
+                <input type="radio" name="pitanje2" value="Ne">travanj<br><br>
+                <input type="radio" name="pitanje2" value="Ne">lipanj<br><br>
+                <input type="radio" name="pitanje2" value="Da">kolovoz<br> <br> 
+                <p> Kako se zove zarobljeni turski konj?<br><br>
+                    <input type="radio" name="pitanje3" value="Da">Edek<br><br>
+                    <input type="radio" name="pitanje3" value="Ne">Alajčauš<br><br>
+                    <input type="radio" name="pitanje3" value="Ne">Arambaša<br> <br>         
+        <p><button class="header-btn3" type="submit" onclick="provjera();" value="submit">Pošalji</button>
+        <button class="header-btn4" id="postavi-na-pocetno" type="reset" value="reset">Otkaži</button> </p>       
+    </form>  
+    <div id="nakon-provjere" style="visibility:hidden;">
+        <p id="poruka"></p>
+        <img src="#" alt="slika" id="slika"><br>
+       
+    </div>
+<br><br>
+    <div id="nakon-provjere" style="visibility:hidden;">
+        <p id="poruka"></p>
+        <img src="#" alt="slika" id="slika"><br>
+        <p id="broj-tocnih"></p>
+    </div>
+
+    <script> 
+        document.getElementById("postavi-na-pocetno").addEventListener("click",
+            function () {
+                document.getElementById("nakon-provjere").style.visibility = "hidden";
+        });
+    </script>
+</body>
+</html>

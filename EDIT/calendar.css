@@ -1,0 +1,153 @@
+
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(image/background2.jpg);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-btn, .header-btn1, .header-btn2,.header-btn3,.header-btn4, .header-btn5, .header-btn6
+{
+  text-decoration: none !important;
+  border-radius: 30px;
+  padding: 4px 12px;
+  color: #fff !important;
+  background: transparent;
+  font-weight: 600;
+  border: 2px solid grey;
+  outline: none;
+  position:relative;
+  top:20px;
+  left:20px;
+}
+.header-btn:hover, .header-btn1:hover, .header-btn2:hover, .header-btn3:hover, .header-btn4:hover, .header-btn5:hover, .header-btn6:hover
+{
+transform: scale(1.05);
+background-color: #107afd;
+border: 2px solid white;
+
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.calendar {
+    margin: auto;
+    width: 600px;
+    background-color:whitesmoke;
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+    background-color: #5e615f;
+    color: #fff;
+}
+
+.weekdays {
+    background-color:black;
+    color: #fff;
+    padding: 7px 0;
+    display: flex;
+}
+
+.days {
+    font-weight: 300;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div,
+.days div {
+    text-align: center;
+    width: 14.28%;
+}
+
+.days div {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: all 0.4s;
+}
+
+.prev_date {
+    color: #999;
+}
+
+.today {
+    background-color: black;
+    color: #fff;
+}
+
+.days div:hover {
+    cursor: pointer;
+    background-color: #dfe6e9
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#month {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+  
+
+@media only screen and (min-width: 1025px)
+{
+  .map
+  {
+    float:left;
+    margin-top: 200px;
+    width:600px;
+  }
+
+
+ 
+  .wrapper
+  {
+    margin:auto;
+    margin-left: 33%;
+    width:600px;
+    height:200px;
+    position: relative;
+    top:200px;
+  }
+
+}
